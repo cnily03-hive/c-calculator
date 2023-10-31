@@ -1,0 +1,48 @@
+{
+  "name": "calculator",
+  "version": "0.1.0",
+  "description": "A simple calculator",
+  "private": true,
+  "author": {
+    "name": "Cnily03",
+    "email": "cnily03@outlook.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cnily03/course-calculator.git"
+  },
+  "scripts": {
+    "vue:serve": "set NODE_ENV=development && vue-cli-service serve",
+    "vue:build": "set NODE_ENV=development && vue-cli-service build",
+    "vue:lint": "vue-cli-service lint",
+    "electron:build-vue": "set OUTPUT_DIR=web && vue-cli-service build",
+    "electron:make": "electron-builder --config ./electron-builder.config.js --publish=never",
+    "build": "npm run electron:build-vue && npm run electron:make && rm -rf web",
+    "test": "set NODE_ENV=development && concurrently --kill-others \"npm run vue:serve\" \"electron .\""
+  },
+  "engines": {
+    "node": ">=16.18.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "copy-webpack-plugin": "^11.0.0",
+    "core-js": "^3.8.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "concurrently": "^8.2.1",
+    "electron": "^26.3.0",
+    "electron-builder": "^24.6.4",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  }
+}
