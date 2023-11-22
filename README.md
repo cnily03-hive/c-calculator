@@ -30,7 +30,7 @@ Type `npm run <command>` to use predefined scripts. Commands are as follows:
 - `vue:serve` - serves the Vue app independently (without Electron) under **development** mode
 - `vue:build` - builds the Vue app independently (without Electron) under **development** mode (output `web-dist`)
 - `vue:lint` - lints the Vue app
-- `electtron:build-vue` - builds the Vue app for electron under **production** mode (output `web`)
+- `electron:build-vue` - builds the Vue app for electron under **production** mode (output `web`)
 - `electron:make` - builds the Electron app based on output of Vue (`electron:build-vue` prerun needed)
 - `build` - builds the Electron app with Vue
 - `test` - tests the Electron app with Vue (Vue hot server)

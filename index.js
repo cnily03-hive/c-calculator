@@ -58,8 +58,9 @@ app.whenReady().then(() => {
     })
 
     // Create a window
-    const mainWindow = new BrowserWindow({
-        width: 400,
+    let ASPECT_RATIO = 1080 / 2400
+    const win = new BrowserWindow({
+        width: 800 * ASPECT_RATIO,
         height: 800,
         icon: path.resolve(__dirname, './web/favicon.ico'),
         webPreferences: {
@@ -68,9 +69,12 @@ app.whenReady().then(() => {
         }
     })
 
+    if (!isDev) win.setMenu(null)
+    win.setAspectRatio(ASPECT_RATIO)
+
     // DEV: 默认打开开发者工具
-    if (isDev) mainWindow.webContents.openDevTools()
+    if (isDev) win.webContents.openDevTools()
 
     // Load main page
-    mainWindow.loadURL('calc://bundle/web/index.html')
+    win.loadURL('calc://bundle/web/index.html')
 })

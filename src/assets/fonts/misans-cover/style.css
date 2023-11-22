@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'MiSans-cover';
+  src:  url('misans-cover.eot?vv4b6r');
+  src:  url('misans-cover.eot?vv4b6r#iefix') format('embedded-opentype'),
+    url('misans-cover.ttf?vv4b6r') format('truetype'),
+    url('misans-cover.woff?vv4b6r') format('woff'),
+    url('misans-cover.svg?vv4b6r#misans-cover') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
